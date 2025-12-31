@@ -1,86 +1,219 @@
-/* Reset some default styles */
+/* Global default */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Body and background */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: #f0f4f8;
-  color: #333;
-  line-height: 1.6;
+  background: #f4f8ff;
+  color: #222;
+  display: flex;
 }
 
-/* Header */
-header {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+/* Sidebar Navigation */
+.sidebar {
+  width: 250px;
+  background: #1b3b74;
   color: white;
+  height: 100vh;
+  position: fixed;
+  padding: 30px 20px;
 }
 
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+.sidebar .logo {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: bold;
 }
 
-header p {
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-/* Section styling */
-section {
-  padding: 50px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
-section h2 {
-  font-size: 2rem;
-  color: #2575fc;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-section p, section li {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-
-/* Skills list */
-#skills ul {
+.sidebar ul {
   list-style: none;
+}
+
+.sidebar ul li {
+  margin: 18px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  color: #76c7fc;
+  padding-left: 5px;
+}
+
+/* Section layout */
+.section {
+  padding: 80px 60px;
+  width: 100%;
+  margin-left: 250px;
+  min-height: 100vh;
+}
+
+/* Home Section */
+.home {
+  background: linear-gradient(120deg, #76c7fc, #1b3b74);
+  color: white;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
 }
 
-#skills li {
-  background: #6a11cb;
-  color: white;
-  padding: 10px 20px;
-  margin: 10px;
-  border-radius: 25px;
+.home .name {
+  font-size: 60px;
+  font-weight: 700;
 }
 
-/* Footer */
-footer {
+.home .tagline {
+  font-size: 22px;
+  margin-top: 10px;
   text-align: center;
-  padding: 20px;
-  background: #2575fc;
-  color: white;
-  font-size: 0.9rem;
+  max-width: 700px;
 }
 
-/* Responsive */
-@media(max-width: 768px){
-  header h1 {
-    font-size: 2.2rem;
+.scroll-down {
+  margin-top: 40px;
+  font-size: 35px;
+  color: white;
+  text-decoration: none;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(10px); }
+}
+
+/* Section Titles */
+.title {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1b3b74;
+}
+
+/* Skills */
+.skills-container {
+  max-width: 700px;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.bar {
+  width: 100%;
+  height: 10px;
+  background: #d6e6ff;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.bar div {
+  height: 100%;
+  background: #1b3b74;
+  border-radius: 5px;
+}
+
+/* Projects */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+}
+
+/* Experience & Education */
+ul li {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+}
+
+.contact-form button {
+  background: #1b3b74;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #294c8e;
+}
+
+/* Mobile Responsive */
+@media (max-width: 850px) {
+  .sidebar {
+    width: 210px;
   }
-  section h2 {
-    font-size: 1.5rem;
+  .section {
+    margin-left: 210px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: relative;
+    height: auto;
+    width: 100%;
+  }
+  .section {
+    margin-left: 0;
+    padding: 50px 25px;
+  }
+  .home .name {
+    font-size: 45px;
   }
 }
