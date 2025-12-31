@@ -3,38 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maria Portfolio</title>
+  <title>Maria Bibi — Web Developer</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Maria Bibi</h1>
-    <p>Front-End Developer | Content Writer | Graphic Designer</p>
-  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>BSIT Student | Passionate about Web Development and Hackathons.</p>
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar">
+    <h2 class="logo">Maria</h2>
+    <ul>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home / Hero Section -->
+  <section id="home" class="section home">
+    <div class="home-text">
+      <h1 class="name">Maria Bibi</h1>
+      <h2 class="tagline" id="tagline">Crafting words and web experiences that connect and inspire.</h2>
+    </div>
+    <a href="#about" class="scroll-down">▼</a>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2 class="title">About Me</h2>
+    <p>
+      I am Maria Bibi, a passionate Content Writer & Web Developer currently pursuing BSIT from GCUF. 
+      Since 2023, I have been working at Overseas Digital Tech as a professional Content Writer, 
+      creating SEO-optimized content and collaborating in design-driven projects.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h2 class="title">Skills</h2>
+    <div class="skills-container">
+      <div class="skill"><span>HTML</span><div class="bar"><div style="width:90%"></div></div></div>
+      <div class="skill"><span>CSS</span><div class="bar"><div style="width:85%"></div></div></div>
+      <div class="skill"><span>JavaScript</span><div class="bar"><div style="width:70%"></div></div></div>
+      <div class="skill"><span>SEO Guest Posting</span><div class="bar"><div style="width:95%"></div></div></div>
+      <div class="skill"><span>Content Writing</span><div class="bar"><div style="width:98%"></div></div></div>
+      <div class="skill"><span>Canva</span><div class="bar"><div style="width:88%"></div></div></div>
+      <div class="skill"><span>Visual Studio</span><div class="bar"><div style="width:75%"></div></div></div>
+      <div class="skill"><span>Sublime Text</span><div class="bar"><div style="width:80%"></div></div></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2 class="title">Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Event Management Website</h3>
+        <p>Frontend website showcasing event management services and UI layout.</p>
+      </div>
+      <div class="project-card">
+        <h3>Tutur Website</h3>
+        <p>A tutoring platform UI written with responsive HTML/CSS and animated sections.</p>
+      </div>
+      <div class="project-card">
+        <h3>E-commerce Website</h3>
+        <p>A multi-product shopping website design including product listing layouts.</p>
+      </div>
+      <div class="project-card">
+        <h3>Wellbeing Website Content</h3>
+        <p>Provided SEO content focused on mental health, wellness and positive psychology.</p>
+      </div>
+      <div class="project-card">
+        <h3>Novels Website</h3>
+        <p>A clean blog-style layout designed for publishing novels and stories online.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <h2 class="title">Experience</h2>
     <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Graphic Design (Canva, Photoshop)</li>
-      <li>Content Writing & SEO</li>
+      <li><strong>Content Writer — Overseas Digital Tech (2023–Present)</strong></li>
+      <li>SEO-optimized content writing</li>
+      <li>Design collaboration on web layouts and UI development</li>
     </ul>
   </section>
 
-  <section id="hackathons">
-    <h2>Hackathon Participation</h2>
-    <p>Participated in international online AI hackathons and learning events (Not a winner yet — but improving every day).</p>
+  <!-- Education -->
+  <section id="education" class="section">
+    <h2 class="title">Education</h2>
+    <ul>
+      <li>BSIT — GCUF</li>
+      <li>Intermediate — GCW Daska</li>
+      <li>Matric — The Educators Daska Campus</li>
+    </ul>
   </section>
 
-  <footer>
-    <p>Contact: your-email@gmail.com | Pakistan</p>
-  </footer>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2 class="title">Contact</h2>
+    <p>Email: <a href="mailto:ab2882489@gmail.com">ab2882489@gmail.com</a></p>
+    <p>Phone: <a href="tel:+923486682115">+92 348 6682115</a></p>
+    <form class="contact-form">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
 
-  <script src="script.js"></script>
 </body>
 </html>
