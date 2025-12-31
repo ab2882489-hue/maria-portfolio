@@ -1,0 +1,86 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body and background */
+body {
+  background: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Section styling */
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #2575fc;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section p, section li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Skills list */
+#skills ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#skills li {
+  background: #6a11cb;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 25px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #2575fc;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media(max-width: 768px){
+  header h1 {
+    font-size: 2.2rem;
+  }
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
