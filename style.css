@@ -217,3 +217,15 @@ ul li {
     font-size: 45px;
   }
 }
+/* Scroll reveal animation */
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.section.active-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
